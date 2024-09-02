@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { ThemeProvider } from "@rneui/themed";
+import { color } from "@/constants/styles/color";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -25,7 +26,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider theme={{}}>
+    <ThemeProvider
+      theme={{
+        darkColors: color,
+        lightColors: color,
+      }}
+    >
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />

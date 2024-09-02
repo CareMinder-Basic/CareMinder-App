@@ -4,8 +4,11 @@ import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { useTheme } from "@rneui/themed";
 
 export default function HomeScreen() {
+  const { theme } = useTheme();
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ dark: "#1D3D47", light: "#A1CEDC" }}
@@ -17,7 +20,9 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText style={{ color: theme.colors["#2A3779"] }} type="title">
+          Welcome!
+        </ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
