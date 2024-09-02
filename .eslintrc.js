@@ -3,6 +3,7 @@ module.exports = {
   plugins: ["prettier", "sort-keys-fix"],
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "error",
     "no-var": "error",
     "prettier/prettier": "error",
     "sort-keys": ["error", "asc", { caseSensitive: true, natural: false }],
