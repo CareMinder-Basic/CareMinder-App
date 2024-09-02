@@ -4,15 +4,23 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
-import { ThemeProvider } from "@rneui/themed";
-import { color } from "@/constants/styles/color";
+import { ThemeProvider as RneuiThemeProvider } from "@rneui/themed";
+import { theme } from "@/constants/styles/theme";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    Pretendard_100: require("../assets/fonts/Pretendard-Thin.ttf"),
+    Pretendard_200: require("../assets/fonts/Pretendard-ExtraLight.ttf"),
+    Pretendard_300: require("../assets/fonts/Pretendard-Light.ttf"),
+    Pretendard_400: require("../assets/fonts/Pretendard-Regular.ttf"),
+    Pretendard_500: require("../assets/fonts/Pretendard-Medium.ttf"),
+    Pretendard_600: require("../assets/fonts/Pretendard-SemiBold.ttf"),
+    Pretendard_700: require("../assets/fonts/Pretendard-Bold.ttf"),
+    Pretendard_800: require("../assets/fonts/Pretendard-ExtraBold.ttf"),
+    Pretendard_900: require("../assets/fonts/Pretendard-Black.ttf"),
   });
 
   useEffect(() => {
@@ -26,16 +34,11 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider
-      theme={{
-        darkColors: color,
-        lightColors: color,
-      }}
-    >
+    <RneuiThemeProvider theme={theme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
-    </ThemeProvider>
+    </RneuiThemeProvider>
   );
 }

@@ -4,7 +4,7 @@ import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useTheme } from "@rneui/themed";
+import { useTheme, Text, Button } from "@rneui/themed";
 
 export default function HomeScreen() {
   const { theme } = useTheme();
@@ -20,16 +20,41 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText style={{ color: theme.colors["#2A3779"] }} type="title">
+        <ThemedText
+          style={{
+            color: theme.colors["#2A3779"],
+            fontFamily: "Pretendard_900",
+          }}
+          type="title"
+        >
           Welcome!
         </ThemedText>
+        <Text color="#2A3779" font="Pretendard_100">
+          font Test
+        </Text>
+        <Text color="#5D6DBE" font="Pretendard_400">
+          font Test
+        </Text>
+        <Text color="#FF0000" font="Pretendard_900">
+          font Test
+        </Text>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText style={{ fontFamily: "Pretendard" }} type="subtitle">
+          Step 1: Try it
+        </ThemedText>
         <ThemedText>
           Edit{" "}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
+          <ThemedText
+            style={{
+              fontFamily: "Black_Pretendard",
+              fontWeight: "900",
+            }}
+            type="defaultSemiBold"
+          >
+            app/(tabs)/index.tsx12
+          </ThemedText>{" "}
           to see changes. Press{" "}
           <ThemedText type="defaultSemiBold">
             {Platform.select({ android: "cmd + m", ios: "cmd + d" })}
@@ -55,6 +80,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <Button font="Pretendard_900">test</Button>
     </ParallaxScrollView>
   );
 }
