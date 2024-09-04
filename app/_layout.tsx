@@ -6,6 +6,8 @@ import "react-native-reanimated";
 
 import { ThemeProvider as RneuiThemeProvider } from "@rneui/themed";
 import { theme } from "@/constants/styles/theme";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "@/store/queryClient";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -35,10 +37,12 @@ export default function RootLayout() {
 
   return (
     <RneuiThemeProvider theme={theme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <QueryClientProvider client={queryClient}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </QueryClientProvider>
     </RneuiThemeProvider>
   );
 }
