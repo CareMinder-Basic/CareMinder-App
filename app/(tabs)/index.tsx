@@ -1,105 +1,25 @@
-import { Image, StyleSheet, Platform } from "react-native";
-
-import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
-import { useTheme, Text, Button } from "@rneui/themed";
+import { ScrollView, View } from "react-native";
+import { Button, Text } from "@rneui/themed";
+import { Layout } from "@/components/Layout";
 
 export default function HomeScreen() {
-  const { theme } = useTheme();
-
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ dark: "#1D3D47", light: "#A1CEDC" }}
-      headerImage={
-        <Image
-          source={require("@/assets/images/partial-react-logo.png")}
-          style={styles.reactLogo}
-        />
-      }
-    >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          style={{
-            color: theme.colors["#2A3779"],
-            fontFamily: "Pretendard_900",
-          }}
-          type="title"
-        >
-          Welcome!
-        </ThemedText>
-        <Text color="#2A3779" font="Pretendard_100">
-          font Test
-        </Text>
-        <Text color="#5D6DBE" font="Pretendard_400">
-          font Test
-        </Text>
-        <Text color="#FF0000" font="Pretendard_900">
-          font Test
-        </Text>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText style={{ fontFamily: "Pretendard" }} type="subtitle">
-          Step 1: Try it
-        </ThemedText>
-        <ThemedText>
-          Edit{" "}
-          <ThemedText
-            style={{
-              fontFamily: "Black_Pretendard",
-              fontWeight: "900",
-            }}
-            type="defaultSemiBold"
-          >
-            app/(tabs)/index.tsx12
-          </ThemedText>{" "}
-          to see changes. Press{" "}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ android: "cmd + m", ios: "cmd + d" })}
-          </ThemedText>{" "}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this
-          starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{" "}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText>{" "}
-          to get a fresh <ThemedText type="defaultSemiBold">app</ThemedText>{" "}
-          directory. This will move the current{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-      <Button font="Pretendard_900">test</Button>
-    </ParallaxScrollView>
+    <Layout>
+      <ScrollView
+        style={{
+          backgroundColor: "gray",
+        }}
+      >
+        <Button font="Pretendard_100" onPress={() => alert("test")}>
+          click
+        </Button>
+        <View style={{ backgroundColor: "blue", minHeight: 800 }}>
+          <Text>123213</Text>
+        </View>
+        <View style={{ backgroundColor: "white", minHeight: 800 }}>
+          <Text>44444</Text>
+        </View>
+      </ScrollView>
+    </Layout>
   );
 }
-
-const styles = StyleSheet.create({
-  reactLogo: {
-    bottom: 0,
-    height: 178,
-    left: 0,
-    position: "absolute",
-    width: 290,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  titleContainer: {
-    alignItems: "center",
-    flexDirection: "row",
-    gap: 8,
-  },
-});
