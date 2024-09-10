@@ -23,4 +23,5 @@ export const color = {
   "#FF0000": "#FF0000",
   "#FF7253": "#FF7253",
   "#F24679": "#F24679",
+  
 } as Colors;
