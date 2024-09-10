@@ -39,7 +39,12 @@ export default function RootLayout() {
     <RneuiThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="(tabs)"
+            options={{
+              headerShown: false,
+            }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
       </QueryClientProvider>

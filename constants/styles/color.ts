@@ -18,6 +18,7 @@ export const color = {
   "#DCE2FF": "#DCE2FF",
   "#EFF1F9": "#EFF1F9",
   "#2A3779": "#2A3779",
+  "#30B4FF": "#30B4FF",
   //red
   "#FF0000": "#FF0000",
   "#FF7253": "#FF7253",

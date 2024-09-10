@@ -14,6 +14,7 @@ type ThemeColors =
   | "#2A3779"
   | "#FF0000"
   | "#FF7253"
+  | "#30B4FF"
   | "#F24679";
 
 type ThemeFont =
