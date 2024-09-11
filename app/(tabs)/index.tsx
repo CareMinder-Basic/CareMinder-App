@@ -1,6 +1,7 @@
 import { ScrollView, View } from "react-native";
 import { Button, Text } from "@rneui/themed";
 import { Layout } from "@/components/Layout";
+import { router } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -10,8 +11,13 @@ export default function HomeScreen() {
           backgroundColor: "gray",
         }}
       >
-        <Button font="Pretendard_100" onPress={() => alert("test")}>
-          click
+        <Button
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("/sign-in/nurse");
+          }}
+        >
+          로그인 페이지
         </Button>
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
           <Text>123213</Text>

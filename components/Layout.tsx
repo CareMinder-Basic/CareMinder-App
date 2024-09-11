@@ -23,16 +23,7 @@ export const Layout = ({ children }: LayoutProps) => {
       }}
     >
       <StatusBar style="dark" />
-      <View
-        style={{
-          backgroundColor: theme.colors["#EFF1F9"],
-          borderRadius: 24,
-          flex: 1,
-          padding: 24,
-        }}
-      >
-        {children}
-      </View>
+      {children}
       <View
         style={{
           backgroundColor: theme.colors["#FFFFFF"],
