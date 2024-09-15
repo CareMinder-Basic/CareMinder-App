@@ -14,11 +14,21 @@ export default function HomeScreen() {
         <Button
           font="Pretendard_100"
           onPress={() => {
-            router.push("/sign-in/nurse");
+            router.push("./sign-in/nurse");
           }}
         >
           로그인 페이지
         </Button>
+
+        <Button buttonStyle={{ backgroundColor: "#5D6DBE"}}
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("./cv-intro/intro");
+          }}
+        >
+          케어보이스 소개
+        </Button>
+        
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
           <Text>123213</Text>
         </View>
