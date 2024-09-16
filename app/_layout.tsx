@@ -45,13 +45,23 @@ export default function RootLayout() {
               headerShown: false,
             }}
           />
+
           <Stack.Screen name="+not-found" />
+
           <Stack.Screen
             name="sign-in/nurse"
             options={{
               headerShown: false,
             }}
           />
+
+          <Stack.Screen
+            name="cv-intro"
+            options={{
+              headerShown: false,
+            }}
+          />
+
         </Stack>
       </QueryClientProvider>
     </RneuiThemeProvider>
