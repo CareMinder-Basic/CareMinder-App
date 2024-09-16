@@ -1,7 +1,7 @@
 import { Image } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
 import { Keyboard, TouchableWithoutFeedback, View } from "react-native";
-import { NurseSignInForm } from "./modules/components/NurseSignInForm";
+import { NurseSignInForm } from "./modules/components/NurseSignInForm/NurseSignInForm";
 import { Title } from "./modules/components/Title";
 
 export default function SignInNursePage() {
