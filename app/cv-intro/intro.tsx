@@ -86,8 +86,8 @@ export default function Intro() {
             }}
             onPress={() => {
               router.push("../sign-in/nurse");
-            }}    
-          />
+            }} font={"Pretendard_700"}          
+            />
         </View>
       )}
     </View>

@@ -30,10 +30,10 @@ export default function HomeScreen() {
         </Button>
         
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
-          <Text>123213</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>123213</Text>
         </View>
         <View style={{ backgroundColor: "white", minHeight: 800 }}>
-          <Text>44444</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>44444</Text>
         </View>
       </ScrollView>
     </Layout>
