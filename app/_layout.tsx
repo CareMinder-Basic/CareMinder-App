@@ -9,6 +9,9 @@ import { theme } from "@/constants/styles/theme";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "@/store/queryClient";
 
+import { Platform } from "react-native";
+import * as NavigationBar from "expo-navigation-bar"; // Import NavigationBar
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -29,6 +32,9 @@ export default function RootLayout() {
     if (loaded) {
       SplashScreen.hideAsync();
     }
+    if (Platform.OS === "android") {
+      NavigationBar.setVisibilityAsync("hidden");
+    }
   }, [loaded]);
 
   if (!loaded) {
@@ -45,7 +51,7 @@ export default function RootLayout() {
               headerShown: false,
             }}
           />
-          <Stack.Screen name="+not-found" />
+
           <Stack.Screen
             name="sign-in/nurse"
             options={{
@@ -54,6 +60,12 @@ export default function RootLayout() {
           />
           <Stack.Screen
             name="sign-in/setting-info/index"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="cv-intro/intro"
             options={{
               headerShown: false,
             }}

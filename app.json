@@ -4,7 +4,7 @@
     "slug": "careMinder-app",
     "version": "1.0.0",
     "orientation": "landscape",
-    //"icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "backgroundColor": "#ffffff",
     "userInterfaceStyle": "automatic",
@@ -17,10 +17,7 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      
     },
     "web": {
       "bundler": "metro",
