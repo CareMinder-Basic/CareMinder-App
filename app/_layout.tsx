@@ -52,6 +52,12 @@ export default function RootLayout() {
               headerShown: false,
             }}
           />
+          <Stack.Screen
+            name="sign-in/setting-info/index"
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack>
       </QueryClientProvider>
     </RneuiThemeProvider>

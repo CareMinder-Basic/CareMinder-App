@@ -20,7 +20,8 @@ export default function HomeScreen() {
           로그인 페이지
         </Button>
 
-        <Button buttonStyle={{ backgroundColor: "#5D6DBE"}}
+        <Button
+          buttonStyle={{ backgroundColor: "#5D6DBE" }}
           font="Pretendard_100"
           onPress={() => {
             router.push("./cv-intro/intro");
@@ -28,7 +29,17 @@ export default function HomeScreen() {
         >
           케어보이스 소개
         </Button>
-        
+
+        <Button
+          buttonStyle={{ backgroundColor: "#5D6DBE" }}
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("/sign-in/setting-info");
+          }}
+        >
+          구역 설정 페이지
+        </Button>
+
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
           <Text>123213</Text>
         </View>

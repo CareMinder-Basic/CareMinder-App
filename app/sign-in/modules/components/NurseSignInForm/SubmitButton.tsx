@@ -2,6 +2,7 @@ import { Text, useTheme } from "@rneui/themed";
 import { Pressable } from "react-native";
 import { useNurseSignInFormContext } from "../../hooks/useNurseSignInForm";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 
 export function SubmitButton() {
   const { theme } = useTheme();
@@ -17,6 +18,7 @@ export function SubmitButton() {
       }}
       onPress={handleSubmit(({ id, password }) => {
         console.log(id, password);
+        router.push("/sign-in/setting-info");
       })}
     >
       <LinearGradient
