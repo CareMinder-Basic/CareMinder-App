@@ -40,6 +40,15 @@ export default function HomeScreen() {
           구역 설정 페이지
         </Button>
 
+        <Button
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("/user-guide/guide");
+          }}
+        >
+          유저 가이드
+        </Button>
+        
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
           <Text font={"Pretendard_700"} color={"#F24679"}>123213</Text>
         </View>
