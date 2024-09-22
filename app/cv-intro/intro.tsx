@@ -85,7 +85,9 @@ export default function Intro() {
               color: "#FFFFFF",
             }}
             onPress={() => {
-              router.push("../sign-in/nurse");
+              // 나중에 수정!
+              //router.push("../(tabs)/index");
+              router.back();
             }} font={"Pretendard_700"}          
             />
         </View>

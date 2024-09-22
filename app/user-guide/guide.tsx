@@ -55,32 +55,29 @@ export default function Guide() {
           style={{
             position: 'absolute',
             bottom: 50,
-            alignSelf: 'center',
-            width: 200,
-            borderRadius: 100, // 그림자를 감싸는 뷰의 모서리 둥글기
-        
-            // 그림자 효과 추가
-            shadowColor: '#000',
-            shadowOffset: { width: 0, height: 4 },
-            shadowOpacity: 0.3,
-            shadowRadius: 4,
-            elevation: 8, // 안드로이드에서 그림자 효과를 위한 설정
+            alignSelf: 'flex-end',
+            width: 202,
+            height: 80,
+            padding: 18,
             }}
         >
           <Button
             title="START"
             buttonStyle={{
-              backgroundColor: "#F24679",
-              padding: 15,
-              borderRadius: 100,
+              backgroundColor: "#C4C5CC",
+              width: "100%",
+              height: "100%",
+              borderRadius: 12,
             }}
             titleStyle={{
               fontFamily: "Pretendard_700",
-              fontSize: 35,
+              fontSize: 22,
+              position: "absolute",
               color: "#FFFFFF",
             }}
             onPress={() => {
-              router.push("../sign-in/nurse");
+              router.back()
+              //router.push("../sign-in/nurse");
             }} font={"Pretendard_700"}          
             />
         </View>
