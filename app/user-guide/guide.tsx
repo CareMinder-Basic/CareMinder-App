@@ -13,32 +13,11 @@ export default function Guide() {
     require("@/assets/images/User_Guide/ug_1.png"),
   ];
 
-  const [isLastImage, setIsLastImage] = useState(false);
-
-  // 이미지 변경 함수
-  const changeImage = () => {
-    if (currentImageIndex < images.length - 1) {
-      setCurrentImageIndex((prevIndex) => prevIndex + 1);
-    } else {
-      setIsLastImage(true); // 마지막 이미지에 도달하면 이미지 고정
-    }
-  };
-  
-  // 2초마다 이미지 변경
-  useEffect(() => {
-    if (isLastImage) return;
-
-    const interval = setInterval(() => {
-      changeImage();
-    }, 2000);
-
-    return () => clearInterval(interval); // 타이머 초기화
-  }, [currentImageIndex, isLastImage]);
 
 
   return (
     <View style={{ flex: 1 }}>
-      <TouchableOpacity style={{ flex: 1 }} onPress={changeImage}>
+      <TouchableOpacity style={{ flex: 1 }}>
         <Image
           resizeMode="stretch"
           style={{
@@ -48,10 +27,7 @@ export default function Guide() {
           source={images[currentImageIndex]} 
         />
       </TouchableOpacity>
-        
-      {/* 마지막 이미지의 START 버튼 */}
-      {isLastImage && (
-        <View
+      <View
           style={{
             position: 'absolute',
             bottom: 50,
@@ -81,7 +57,6 @@ export default function Guide() {
             }} font={"Pretendard_700"}          
             />
         </View>
-      )}
     </View>
   );
 }
