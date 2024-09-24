@@ -53,7 +53,7 @@ export default function RootLayout() {
           />
 
           <Stack.Screen
-            name="sign-in/nurse"
+            name="sign-in/nurse/index"
             options={{
               headerShown: false,
             }}

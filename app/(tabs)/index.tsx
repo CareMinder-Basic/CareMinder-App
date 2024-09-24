@@ -48,12 +48,16 @@ export default function HomeScreen() {
         >
           유저 가이드
         </Button>
-        
+
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
-          <Text font={"Pretendard_700"} color={"#F24679"}>123213</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>
+            123213
+          </Text>
         </View>
         <View style={{ backgroundColor: "white", minHeight: 800 }}>
-          <Text font={"Pretendard_700"} color={"#F24679"}>44444</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>
+            44444
+          </Text>
         </View>
       </ScrollView>
     </Layout>
