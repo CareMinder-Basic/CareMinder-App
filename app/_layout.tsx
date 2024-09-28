@@ -65,6 +65,12 @@ export default function RootLayout() {
             }}
           />
           <Stack.Screen
+            name="sign-in/patient/index"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
             name="cv-intro/intro"
             options={{
               headerShown: false,

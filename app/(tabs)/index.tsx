@@ -41,6 +41,16 @@ export default function HomeScreen() {
         </Button>
 
         <Button
+          buttonStyle={{ backgroundColor: "#BEE7FF" }}
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("/sign-in/patient");
+          }}
+        >
+          환자 로그인 페이지
+        </Button>
+
+        <Button
           font="Pretendard_100"
           onPress={() => {
             router.push("/user-guide/guide");

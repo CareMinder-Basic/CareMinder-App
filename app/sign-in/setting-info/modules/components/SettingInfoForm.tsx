@@ -32,6 +32,7 @@ export function SettingInfoForm() {
           placeholder="선택해주세요."
           label="구역 설정"
           options={OPTIONS}
+          scrollViewHeight={140}
         />
       </View>
       <ButtonBox disabled={!selectValue} />

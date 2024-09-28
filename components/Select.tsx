@@ -12,11 +12,13 @@ import {
 
 interface SelectProps {
   options: { value: string; label: string }[];
-  placeholder: string;
+  placeholder?: string;
   label: string;
   onSelect: (value: string) => void;
   style?: ViewStyle;
   value?: string;
+  scrollViewHeight?: number;
+  required?: boolean;
 }
 
 export function Select({
@@ -26,6 +28,8 @@ export function Select({
   placeholder,
   style,
   value,
+  scrollViewHeight,
+  required,
 }: SelectProps) {
   const [selected, setSelected] = useState(false);
   const { theme } = useTheme();
@@ -52,6 +56,7 @@ export function Select({
       <Pressable
         style={{
           alignItems: "center",
+          backgroundColor: theme.colors["#FFFFFF"],
           borderBottomLeftRadius: selected ? 0 : 8,
           borderBottomRightRadius: selected ? 0 : 8,
           borderBottomWidth: selected ? 0 : 1,
@@ -71,13 +76,24 @@ export function Select({
         ref={selectTriggerRef}
         onPress={() => setSelected(true)}
       >
-        <Text
-          color="#5D6DBE"
-          font="Pretendard_700"
-          style={{ fontSize: 14, lineHeight: 20 }}
-        >
-          {label}
-        </Text>
+        <View style={{ alignItems: "center", flexDirection: "row" }}>
+          <Text
+            color="#5D6DBE"
+            font="Pretendard_700"
+            style={{ fontSize: 14, lineHeight: 20 }}
+          >
+            {label}
+          </Text>
+          {required && (
+            <Text
+              font="Pretendard_700"
+              color="#FF7253"
+              style={{ fontSize: 14, lineHeight: 20 }}
+            >
+              *
+            </Text>
+          )}
+        </View>
         <View style={{ alignItems: "center", flexDirection: "row", gap: 6 }}>
           <Text
             font="Pretendard_400"
@@ -119,7 +135,7 @@ export function Select({
                     backgroundColor: theme.colors["#FFFFFF"],
                     borderBottomLeftRadius: 8,
                     borderBottomRightRadius: 8,
-                    height: 140,
+                    height: scrollViewHeight,
                   }}
                   showsVerticalScrollIndicator
                   indicatorStyle="black"
