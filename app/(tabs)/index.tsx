@@ -41,6 +41,16 @@ export default function HomeScreen() {
         </Button>
 
         <Button
+          buttonStyle={{ backgroundColor: "#BEE7FF" }}
+          font="Pretendard_100"
+          onPress={() => {
+            router.push("/sign-in/patient");
+          }}
+        >
+          환자 로그인 페이지
+        </Button>
+
+        <Button
           font="Pretendard_100"
           onPress={() => {
             router.push("/user-guide/guide");
@@ -48,12 +58,16 @@ export default function HomeScreen() {
         >
           유저 가이드
         </Button>
-        
+
         <View style={{ backgroundColor: "blue", minHeight: 800 }}>
-          <Text font={"Pretendard_700"} color={"#F24679"}>123213</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>
+            123213
+          </Text>
         </View>
         <View style={{ backgroundColor: "white", minHeight: 800 }}>
-          <Text font={"Pretendard_700"} color={"#F24679"}>44444</Text>
+          <Text font={"Pretendard_700"} color={"#F24679"}>
+            44444
+          </Text>
         </View>
       </ScrollView>
     </Layout>

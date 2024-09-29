@@ -53,13 +53,19 @@ export default function RootLayout() {
           />
 
           <Stack.Screen
-            name="sign-in/nurse"
+            name="sign-in/nurse/index"
             options={{
               headerShown: false,
             }}
           />
           <Stack.Screen
             name="sign-in/setting-info/index"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="sign-in/patient/index"
             options={{
               headerShown: false,
             }}
