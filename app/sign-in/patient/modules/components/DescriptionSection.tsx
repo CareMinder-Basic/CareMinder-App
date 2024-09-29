@@ -51,8 +51,9 @@ export function DescriptionSection() {
           </View>
         </View>
         <Text
+          color="#5E5F65"
           font="Pretendard_400"
-          style={{ color: "rgba(94, 95, 101, 0.6)", textAlign: "center" }}
+          style={{ opacity: 0.6, textAlign: "center" }}
         >
           케어마인더를 시작하기 위해 아래의{`\n`}정보를 기입해 주세요.
         </Text>
