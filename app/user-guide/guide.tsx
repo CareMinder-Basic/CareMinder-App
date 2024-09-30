@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, TouchableOpacity, ActivityIndicator } from "react-native";
 import { Image, Button } from "@rneui/themed";
 import { useRouter } from "expo-router";
+import { SkipButton } from "@/components/SkipButton"; // SkipButton 컴포넌트 불러오기
 
 export default function Guide() {
   const router = useRouter();
@@ -39,36 +40,8 @@ export default function Guide() {
         />
       </TouchableOpacity>
 
-      {/* SKIP 버튼 */}
-      <View
-        style={{
-          position: 'absolute',
-          alignSelf: 'flex-end',
-          top: 40,
-          paddingHorizontal: 36,
-          paddingVertical: 20,
-          width: 212,
-          height: 80,
-        }}
-      >
-        <Button
-          title="SKIP >>"
-          buttonStyle={{
-            backgroundColor: "#C4C5CC",
-            width: "100%",
-            height: "100%",
-            borderRadius: 12,
-          }}
-          titleStyle={{
-            fontFamily: "Pretendard_700",
-            fontSize: 22,
-            color: "#FFFFFF",
-          }}
-          onPress={() => {
-            router.back();
-          }}
-        />
-      </View>
+      <SkipButton />
+
 
       {/* 마지막 이미지가 로드된 후에만 버튼 표시 */}
       {isLastImageLoaded && (

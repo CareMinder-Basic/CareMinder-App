@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Image, Button } from "@rneui/themed";
 import { useRouter } from "expo-router";
+import { SkipButton } from "@/components/SkipButton"; // SkipButton 컴포넌트 불러오기
 
 export default function Guide_2() {
   const router = useRouter();
@@ -62,6 +63,7 @@ export default function Guide_2() {
         />
       </TouchableOpacity>
        
+      <SkipButton />
     </View>
   );
 }
