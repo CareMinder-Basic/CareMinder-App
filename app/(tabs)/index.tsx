@@ -51,6 +51,7 @@ export default function HomeScreen() {
         </Button>
 
         <Button
+          buttonStyle={{ backgroundColor: "#BEE7FF" }}
           font="Pretendard_100"
           onPress={() => {
             router.push("/user-guide/guide");

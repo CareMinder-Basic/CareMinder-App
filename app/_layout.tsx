@@ -83,6 +83,13 @@ export default function RootLayout() {
               headerShown: false,
             }}
           />
+
+          <Stack.Screen
+            name="user-guide/guide_2"
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack>
       </QueryClientProvider>
     </RneuiThemeProvider>

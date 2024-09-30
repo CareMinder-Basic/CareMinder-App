@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Image, Button } from "@rneui/themed";
 import { useRouter } from "expo-router";
-import { set } from "react-hook-form";
 
 export default function Guide() {
   const router = useRouter();
@@ -13,7 +12,6 @@ export default function Guide() {
   const images = [
     require("@/assets/images/User_Guide/ug_1.png"),
     require("@/assets/images/User_Guide/ug_2.png"),
-    require("@/assets/images/User_Guide/hand.png"),
   ];
 
   const [isLastImage, setIsLastImage] = useState(false);
@@ -22,6 +20,7 @@ export default function Guide() {
   const changeImage = () => {
       setCurrentImageIndex(1);
   };
+
   return (
     <View style={{ flex: 1 }}>
       <TouchableOpacity style={{ flex: 1 }} onPress={changeImage}>
@@ -67,7 +66,7 @@ export default function Guide() {
             />
         </View>
 
-      {/* 마지막 이미지의 START 버튼 */}
+      {/* 마지막 이미지의 음성 요청 버튼 */}
       {currentImageIndex == 1 && (
         <View
           style={{
@@ -94,10 +93,11 @@ export default function Guide() {
             }}
             onPress={() => {
               // 나중에 수정
-              //router.push("../(tabs)/index");
-              router.back();
-            }} font={"Pretendard_700"}          
+              router.push("./guide_2");
+            }} font={"Pretendard_700"}  
+                  
             />
+
         </View>
       )}
     </View>
