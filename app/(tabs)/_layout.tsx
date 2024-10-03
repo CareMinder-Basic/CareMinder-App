@@ -110,30 +110,36 @@ export default function TabLayout() {
                 top: insets.top,
               }}
             >
-              {state.routes.map(({ name, key }) => (
-                <Pressable
-                  key={key}
-                  style={{
-                    width: "100%",
-                  }}
-                  onPress={() => {
-                    navigation.navigate({
-                      key,
-                      name,
-                    });
-                  }}
-                >
-                  <View style={{ alignItems: "center" }}>
-                    <Image
-                      source={ROUTES[name as keyof typeof ROUTES].image}
-                      style={{ height: 40, width: 40 }}
-                    />
-                    <Text color="#5D6DBE" font="Pretendard_600">
-                      {ROUTES[name as keyof typeof ROUTES].name}
-                    </Text>
-                  </View>
-                </Pressable>
-              ))}
+              {state.routes.map(({ name, key }, index) => {
+                const isCurrentRoute = state.index === index;
+
+                return (
+                  <Pressable
+                    key={key}
+                    style={{
+                      width: "100%",
+                    }}
+                    onPress={() => {
+                      navigation.navigate({
+                        key,
+                        name,
+                      });
+                    }}
+                  >
+                    <View style={{ alignItems: "center" }}>
+                      {ROUTES[name as keyof typeof ROUTES].image({
+                        color: isCurrentRoute ? "#5D6DBE" : "#C4C5CC",
+                      })}
+                      <Text
+                        color={isCurrentRoute ? "#5D6DBE" : "#C4C5CC"}
+                        font="Pretendard_600"
+                      >
+                        {ROUTES[name as keyof typeof ROUTES].name}
+                      </Text>
+                    </View>
+                  </Pressable>
+                );
+              })}
             </View>
           </View>
         );
@@ -152,7 +158,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="request-details"
         options={{
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
@@ -160,7 +166,7 @@ export default function TabLayout() {
               color={color}
             />
           ),
-          title: "Explore",
+          title: "Request Details",
         }}
       />
     </Tabs>
