@@ -1,6 +1,7 @@
 import { UnionSvg } from "@/components/svgs/Union";
 import { Text, useTheme } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import { Pressable, View } from "react-native";
 
 interface VerticalLineProps {
@@ -71,6 +72,7 @@ export function RequestSection() {
           paddingHorizontal: 44,
           paddingVertical: 14,
         }}
+        onPress={() => router.push("/request/recording")}
       >
         <Text
           font="Pretendard_500"

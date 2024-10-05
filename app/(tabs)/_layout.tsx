@@ -127,14 +127,14 @@ export default function TabLayout() {
                     }}
                   >
                     <View style={{ alignItems: "center" }}>
-                      {ROUTES[name as keyof typeof ROUTES].image({
+                      {ROUTES[name as keyof typeof ROUTES]?.image({
                         color: isCurrentRoute ? "#5D6DBE" : "#C4C5CC",
                       })}
                       <Text
                         color={isCurrentRoute ? "#5D6DBE" : "#C4C5CC"}
                         font="Pretendard_600"
                       >
-                        {ROUTES[name as keyof typeof ROUTES].name}
+                        {ROUTES[name as keyof typeof ROUTES]?.name}
                       </Text>
                     </View>
                   </Pressable>
@@ -167,6 +167,12 @@ export default function TabLayout() {
             />
           ),
           title: "Request Details",
+        }}
+      />
+      <Tabs.Screen
+        name="request/recording"
+        options={{
+          title: "request-recording",
         }}
       />
     </Tabs>
