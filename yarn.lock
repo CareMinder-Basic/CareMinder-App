@@ -4225,6 +4225,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.2.1"
     eslint-plugin-sort-keys-fix: "npm:^1.1.2"
     expo: "npm:~51.0.28"
+    expo-av: "npm:~14.0.7"
     expo-constants: "npm:~16.0.2"
     expo-font: "npm:~12.0.9"
     expo-image: "npm:~1.12.15"
@@ -5893,6 +5894,15 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 10c0/aed3164cee4483e47fa56c8898384769d60ebb3f94553f7ad2a33a8902d73a1379aee3fc51833c8f0a4a59979ed842ba079e52c8e1903104b1ad312ad90fe1d1
+  languageName: node
+  linkType: hard
+
+"expo-av@npm:~14.0.7":
+  version: 14.0.7
+  resolution: "expo-av@npm:14.0.7"
+  peerDependencies:
+    expo: "*"
+  checksum: 10c0/af569a45eecdbe96f8f9fd9eff12fa4f52ac4a48827110c8fd7bcee09745e16906a12ecd9e5cf88d96ee16bfe19d9e72463ee09d97a0fd09b30be35acabef3c3
   languageName: node
   linkType: hard
 
