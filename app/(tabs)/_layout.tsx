@@ -170,9 +170,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="request/recording"
+        name="request/recording/index"
         options={{
           title: "request-recording",
+        }}
+      />
+      <Tabs.Screen
+        name="request/complete/index"
+        options={{
+          title: "request-complete",
         }}
       />
     </Tabs>

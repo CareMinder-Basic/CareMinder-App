@@ -25,9 +25,6 @@ export const useRecord = () => {
   }) => {
     setRecording(null);
     await recording?.stopAndUnloadAsync();
-    await Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-    });
     const uri = recording?.getURI();
 
     if (uri) {
