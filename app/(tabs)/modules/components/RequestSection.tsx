@@ -30,7 +30,8 @@ export function RequestSection() {
         gap: 32,
         height: "100%",
         justifyContent: "center",
-        width: "60%",
+        width: "100%",
+        borderRadius: 24,
       }}
       start={[0, 0]}
       end={[0, 1]}
