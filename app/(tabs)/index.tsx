@@ -13,18 +13,20 @@ export default function HomeScreen() {
     <Layout>
       <View style={{ flex: 1, flexDirection: 'row' }}>
         {/* 왼쪽 ServiceMenu 섹션 */}
-        <View style={{ flex: 1, padding: theme.spacing.md }}>
+        <View 
+          style={{
+            flex: 11,
+            backgroundColor: '#EFF1F9',  
+            borderRadius: 12,
+          }}>
           <ServiceMenu />
         </View>
 
         {/* 오른쪽 RequestSection 섹션 */}
         <View
           style={{
-            flex: 1,
-            padding: theme.spacing.md,
-            justifyContent: 'center',
-            alignItems: 'center',
-            //backgroundColor: , // 테마의 색상 사용
+            flex: 19,
+            paddingLeft: 20,
           }}
         >
           <RequestSection />
